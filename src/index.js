@@ -4,11 +4,13 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import NotFoundPage from './404page/NotFoundPage';
 import App from './App';
 import Layout from './Layout';
+import Admin from './components/Admin/Admin';
 import Contact from './components/Contact/Contact';
 import Placement from './components/placement/Placement';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
+import AdmissionPage from './pages/AdmissionPage';
 import NoticePage from './pages/NoticePage';
+import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
@@ -16,6 +18,8 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/contact' element={<Contact />} />
     <Route path='/placement' element={<Placement />} />
     <Route path='/notice' element={<NoticePage />} />
+    <Route path='/admission' element={<AdmissionPage />} />
+    <Route path='/admin' element={<Admin />} />
     <Route path='/*' element={<NotFoundPage />} />
   </Route>
 ))
