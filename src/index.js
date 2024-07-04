@@ -8,12 +8,14 @@ import Contact from './components/Contact/Contact';
 import Placement from './components/placement/Placement';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import NoticePage from './pages/NoticePage';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
     <Route path='' element={<App />} />
     <Route path='/contact' element={<Contact />} />
     <Route path='/placement' element={<Placement />} />
+    <Route path='/notice' element={<NoticePage />} />
     <Route path='/*' element={<NotFoundPage />} />
   </Route>
 ))

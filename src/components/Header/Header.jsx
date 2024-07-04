@@ -9,8 +9,9 @@ function Header() {
   const navMenu = [
     { name: "Contact Us", slug: "/contact" },
     { name: "Placements", slug: "/placement" },
-    { name: "Admission Now", slug: "https://apex.oracle.com/pls/apex/r/nureajam/collage-admission/new-students-addmission-from?session=106557303270385" },
-    { name: "Admin Login", slug: "https://apex.oracle.com/pls/apex/r/nureajam/collage-admission/login?session=106557303270385" },
+    { name: "Notice", slug: "/notice", newImg: "/images/new.gif" },
+    { name: "Admission Now", slug: "/admission" },
+    { name: "Admin Login", slug: "/admin" },
   ]
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false);
@@ -70,11 +71,11 @@ function Header() {
           <ul
             className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[99] left-0 w-full md:w-auto pl-9 md:pl-0  transition-all md:bg-transparent bg-gray-50 md:text-white text-gray-600 duration-500 ease-in py-14 md:py-0 ${isNavOpen ? "top-16" : "top-[-490px] "
               }`}
-          >           {navMenu.map((menu, index) => (
+          >   {navMenu.map((menu, index) => (
             <li key={index} className="text-sm my-7 md:my-0 md:ml-8 cursor-pointer uppercase" >
               <NavLink to={menu.slug} className={({ isActive }) => `${isActive ? "text-red-800 font-semibold" :
-                "md:text-white text-black"
-                }`}>{menu.name}</NavLink>
+                "md:text-white text-black "
+                }`}>{menu.name} {menu.newImg && <img className="inline text-center" src={menu.newImg} alt="New" />}</NavLink>
 
             </li>
           ))}
