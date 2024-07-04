@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import Typed from "typed.js";
 
 
@@ -28,7 +27,6 @@ function HeroSection() {
     };
   }, []);
 
-  const navigate=useNavigate()
 
   return (
     <div className="relative w-full bg-gray-100 text-blue-900 py-36 overflow-hidden">
@@ -57,7 +55,8 @@ function HeroSection() {
         </p>
 
         {/* CTA Button */}
-        <button className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white  rounded-full transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 md:py-3 md:px-4 py-3 px-3 text-sm flex justify-center items-center gap-2">
+        <button onClick={() => window.location.href = "https://apex.oracle.com/pls/apex/r/nureajam/collage-admission/new-students-addmission-from?session=106557303270385"}
+          className="bg-blue-500 hover:bg-blue-600 focus:bg-blue-600 text-white  rounded-full transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-400 md:py-3 md:px-4 py-3 px-3 text-sm flex justify-center items-center gap-2">
           <span><img src="/images/new.gif" alt="New" /></span>  Apply for Admission (2024-25)
         </button>
       </div>

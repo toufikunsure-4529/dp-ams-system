@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import NotFoundPage from './404page/NotFoundPage';
 import App from './App';
 import Layout from './Layout';
 import Contact from './components/Contact/Contact';
+import Placement from './components/placement/Placement';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import NotFoundPage from './404page/NotFoundPage';
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
     <Route path='' element={<App />} />
     <Route path='/contact' element={<Contact />} />
+    <Route path='/placement' element={<Placement />} />
     <Route path='/*' element={<NotFoundPage />} />
   </Route>
 ))

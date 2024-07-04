@@ -9,8 +9,8 @@ function Header() {
   const navMenu = [
     { name: "Contact Us", slug: "/contact" },
     { name: "Placements", slug: "/placement" },
-    { name: "Admission Now", slug: "/admission" },
-    { name: "Admin Login", slug: "/admin" },
+    { name: "Admission Now", slug: "https://apex.oracle.com/pls/apex/r/nureajam/collage-admission/new-students-addmission-from?session=106557303270385" },
+    { name: "Admin Login", slug: "https://apex.oracle.com/pls/apex/r/nureajam/collage-admission/login?session=106557303270385" },
   ]
   const [isNavOpen, setIsNavOpen] = useState(false)
   const [isSticky, setIsSticky] = useState(false);
@@ -34,7 +34,21 @@ function Header() {
 
   return (
     <>
-    
+      <div className="w-full bg-blue-900 ">
+        <div className="max-w-full mx-auto flex justify-center ">
+          <div className="w-full bg-blue-900 text-white text-center">
+            <marquee width="90%" height="33px" behavior="alternate" className="py-5 flex items-center justify-center">
+              Admission started for the academic year 2024-25.
+            </marquee>
+          </div>
+          <div className=" bg-yellow-500 w-1/4 ">
+            +91 8001074096
+          </div>
+          <div className="bg-red-800 text-white w-1/3">
+            +91 8001074096
+          </div>
+        </div>
+      </div >
       <div className={`w-full text-white transition-all duration-300 ${isSticky ? "bg-black fixed top-0 left-0 z-50 opacity-100" : "bg-blue-500 opacity-100"}`}>
         <div className="flex justify-between items-center py-3 md:px-8 px-2">
           <div>

@@ -4,7 +4,10 @@ import React from 'react';
 const Footer = () => {
 
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-800 text-white py-8" style={{
+      backgroundImage: "url('/images/footerbg.png')",
+    }}>
+
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full sm:w-1/3 mb-4">
